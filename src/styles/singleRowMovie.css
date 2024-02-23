@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+body{
+    color:white;
+}
+
+#trendingHeader{
+    font-weight: 300;
+}
+.TrendingContainer{
+display: flex;
+flex-direction: row;
+gap:1rem;
+overflow: scroll;
+margin-left:1rem;
+scrollbar-color: pink;
+scrollbar-width: thin;
+}
+
+
+
+.trendingMovie{
+    border-radius:8px;
+    height:190px;
+    width:290px;
+}
+
+.imageContainer{
+    position: relative;
+}
+
+.imageDetails{
+    display: flex;
+    gap:0.5rem;
+    position: absolute;
+    top:7rem;
+    left:1rem;
+    opacity: 75%;
+}
+
+.movieTitle{
+    position: absolute;
+    top:8rem;
+    left:1rem;
+    padding-top:0.5rem;
+    font-family: 'Outfit',sans-serif;
+}
+
+#movieCategory{
+    display: flex;
+    align-items: center;
+    
+}

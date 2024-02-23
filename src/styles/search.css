@@ -1,0 +1,14 @@
+input{
+    border-radius: 15px;
+    background-color: black;
+    width:200px;
+}
+
+form{
+    display: flex;
+   
+    margin-top:2rem;
+}
+
+
+

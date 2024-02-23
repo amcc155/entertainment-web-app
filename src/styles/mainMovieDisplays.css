@@ -1,0 +1,51 @@
+
+h1{
+    font-weight: 300;
+}
+
+.recommendedMoviesContainer{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    margin-top:1rem;
+    gap:1rem;
+
+    /* justify-content: center;
+     */
+   
+}    
+.recommendedImage{
+    width:100%;
+    border-radius:8px;
+    position: relative;
+}
+
+.recImageDetails{
+    display: flex;
+    gap:0.5rem;
+    position: relative;
+}
+
+#bookmark{
+    position: absolute;
+    
+}
+
+.movieCardWrapper {
+    transition: transform 0.3s ease;
+   
+   width:226px;
+    
+  }
+  
+  .movieCardWrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  @media screen and (min-width: 1024px) {
+    main{
+        margin-left:8rem;
+        margin-top:5rem;
+    }
+}
