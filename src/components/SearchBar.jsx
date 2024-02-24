@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/search.css'
-const SearchBar = ({ data, dataType, onSubmit }) => {
+const SearchBar = ({ data, dataType, onSubmit, setSearchTerm, searchTerm }) => {
     const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
@@ -8,6 +8,9 @@ const SearchBar = ({ data, dataType, onSubmit }) => {
         onSubmit(value);
     };
 
+    const handleChange = (e) => {
+        setValue(e.target.value)
+    }
     return (
         <form onSubmit={handleSubmit}>
             <input
@@ -15,7 +18,7 @@ const SearchBar = ({ data, dataType, onSubmit }) => {
                 type='text'
                 value={value}
                 placeholder={`Search for ${dataType}`}
-                onChange={e => setValue(e.target.value)}
+                onChange= {handleChange}
             />
         </form>
     );

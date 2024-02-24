@@ -8,29 +8,35 @@
   import Home from './components/Home';
   import Movies from './components/Movies';
 
+
   function App() {
+  
+    const[searchTerm, setSearchTerm] = useState('')
     const [data, setData] = useState(dataJSON);
-    const [filteredMovies, setFilteredMovies] = useState(data)
+    const filteredMovies = data.filter(item => item.title.includes(searchTerm));
+
     const[searching, setSearching] = useState(false)
 
   //handles the event when user saves a movie
-  const handleBookmarkClick = (index) => {
-      const newData = [...data];
-      newData[index]['isBookmarked'] = !newData[index]['isBookmarked'];
-      
-      setData(newData);
-      console.log(newData[index])
+  const handleBookmarkClick = (name) => {
+      const newData = data.map((item) =>{
+        if(item.title == name){
+          return {...item, isBookmarked: !item.isBookmarked}
+        }
+        return item
+      })
+     setData(newData);
+     
       console.log(newData)
     };
 
   //  funciton to search through json, pass it to searchBar componenet. Move up in state later
         const SearchData = (query) => {
           if (query === ''){
-              setFilteredMovies(data)
+              setSearchTerm(query)
               setSearching(false)
           }else{
-          let searchedData = data.filter((movie) => movie.title.includes(query))
-          setFilteredMovies(searchedData)
+          setSearchTerm(query)
           setSearching(true)
           }
       }
@@ -44,7 +50,7 @@
             <Route path = "/" element = {<Home handleBookmarkClick = {handleBookmarkClick}  data = {data} SearchData = {SearchData} filteredMovies = {filteredMovies}/>}/>
             <Route path="/bookmarked" element={<BookmarkedMovies data={data} handleClick={handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies} />} />
             <Route path = "/television-shows" element = {<TelevisionShows data = {data} handleClick= {handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies}/>} />
-            <Route path = "/movies" element = {<Movies  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setFilteredMovies = {setFilteredMovies} data = {data}/>}/>
+            <Route path = "/movies" element = {<Movies  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>}/>
           </Routes>
         </BrowserRouter>
       </>

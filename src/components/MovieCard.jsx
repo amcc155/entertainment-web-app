@@ -16,7 +16,7 @@ const Card = ({handleClick, movie, index}) => {
     <div className="recImageDetails">
       <div id="bookmark">
         {" "}
-        <MovieBookmarked onClick={() => handleClick(index)} clicked = {movie.isBookmarked} />{" "}
+        <MovieBookmarked onClick={() => handleClick(movie.title)} clicked = {movie.isBookmarked} />{" "}
       </div>
       
       <p> {movie.year} </p>

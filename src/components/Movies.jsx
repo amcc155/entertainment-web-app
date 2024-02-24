@@ -1,8 +1,8 @@
 import Card from "./MovieCard";
 import SearchBar from "./SearchBar";
 
-import React, { useState, useEffect } from "react";
-const Movies = ({handleClick, SearchData, filteredMovies, searching, setSearching, setFilteredMovies, data}) => {
+import React, {useEffect } from "react";
+const Movies = ({handleClick, SearchData, filteredMovies, searching, setSearching, setSearchTerm, data, searchTerm}) => {
   const movies = filteredMovies.filter((movie) => movie.category === "Movie");
 
 const arrayLength = filteredMovies.length
@@ -13,14 +13,14 @@ useEffect(() => {
     console.log('ok')
     // Cleanup function that sets searching to false when component unmounts
     setSearching(false);
-    setFilteredMovies(data)
+
 
   };
 }, []);
   return (
     <>
     <main>
-      <SearchBar  dataType={"movie"} onSubmit = {SearchData} />
+      <SearchBar  dataType={"movie"} onSubmit = {SearchData} setSearchTerm = {setSearchTerm} searchTerm={searchTerm} />
       {searching?(
         <h1> {`Showing ${arrayLength} Results`} </h1>
       ):<h1> Movies </h1>}
