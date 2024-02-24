@@ -44,7 +44,7 @@
             <Route path = "/" element = {<Home handleBookmarkClick = {handleBookmarkClick}  data = {data} SearchData = {SearchData} filteredMovies = {filteredMovies}/>}/>
             <Route path="/bookmarked" element={<BookmarkedMovies data={data} handleClick={handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies} />} />
             <Route path = "/television-shows" element = {<TelevisionShows data = {data} handleClick= {handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies}/>} />
-            <Route path = "/movies" element = {<Movies  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching}/>}/>
+            <Route path = "/movies" element = {<Movies  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setFilteredMovies = {setFilteredMovies} data = {data}/>}/>
           </Routes>
         </BrowserRouter>
       </>

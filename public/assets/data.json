@@ -30,13 +30,15 @@
         "medium": "./assets/thumbnails/bottom-gear/regular/medium.jpg",
         "large": "./assets/thumbnails/bottom-gear/regular/large.jpg"
       }
-    },
+ },
     "year": 2021,
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": true
   },
+
+  
   {
     "title": "Undiscovered Cities",
     "thumbnail": {
