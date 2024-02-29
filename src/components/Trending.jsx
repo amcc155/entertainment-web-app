@@ -1,5 +1,5 @@
 import "../styles/singleRowMovie.css";
-import SearchBar from "./SearchBar";
+import SearchBar from "./common/SearchBar";
 const Trending = ({ handleClick, data, filteredMovies }) => {
   const TrendingMovies = filteredMovies.filter((Movie) => Movie.isTrending);
 

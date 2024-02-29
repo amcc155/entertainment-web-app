@@ -1,16 +1,15 @@
   import React, { useState } from 'react';
-  import NavBar from './components/Nav';
+  import NavBar from './components/layouts/Nav';
   import dataJSON from '../public/assets/data.json';
   import './App.css';
   import { BrowserRouter, Routes, Route } from 'react-router-dom';
-  import BookmarkedMovies from './components/BookmarkedMovies';
-  import TelevisionShows from './components/TelevisionShows';
-  import Home from './components/Home';
-  import Movies from './components/Movies';
+  import BookmarkedMovies from './components/pages/BookmarkedMovies';
+  import TelevisionShows from './components/pages/TelevisionShows';
+  import Homes from './components/pages/Home';
+  import MovieList from './components/pages/Movies';
 
 
   function App() {
-  
     const[searchTerm, setSearchTerm] = useState('')
     const [data, setData] = useState(dataJSON);
     const filteredMovies = data.filter(item => item.title.includes(searchTerm));
@@ -47,10 +46,10 @@
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path = "/" element = {<Home handleBookmarkClick = {handleBookmarkClick}  data = {data} SearchData = {SearchData} filteredMovies = {filteredMovies}/>}/>
-            <Route path="/bookmarked" element={<BookmarkedMovies data={data} handleClick={handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies} />} />
-            <Route path = "/television-shows" element = {<TelevisionShows data = {data} handleClick= {handleBookmarkClick} SearchData = {SearchData} filteredMovies = {filteredMovies}/>} />
-            <Route path = "/movies" element = {<Movies  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>}/>
+            <Route path = "/" element = {<Homes handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>}/>
+            <Route path="/bookmarked" element={<BookmarkedMovies handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>} />
+            <Route path = "/movies" element = {<MovieList  handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>}/>
+            <Route path = "/television-shows" element = {<TelevisionShows handleClick = {handleBookmarkClick} SearchData = {SearchData} filteredMovies={filteredMovies} searching = {searching} setSearching = {setSearching} setSearchTerm={setSearchTerm} searchTerm = {searchTerm} data = {data}/>} />
           </Routes>
         </BrowserRouter>
       </>

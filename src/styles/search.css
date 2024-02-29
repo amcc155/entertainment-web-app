@@ -1,13 +1,35 @@
 input{
-    border-radius: 15px;
+    /* border-radius: 15px; */
     /* background-color: black; */
-    width:200px;
+    width:100%;
+    caret-color: red;
+    font-size:1.5rem;
+    color:white;
+    background:none;
+    border:0;
+    outline:none;
 }
+
+.search{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+
+}
+
 
 form{
     display: flex;
-   
+    flex-direction: column;
+    /* border-bottom:1px solid white; */
     margin-top:2rem;
+}
+
+form::after{
+    content: '';
+    border-bottom: 2px solid white; 
+    padding-top:1rem;
+    width:70%;
 }
 
 
