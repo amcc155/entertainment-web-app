@@ -1,9 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import HomeIcon from "../../../public/assets/Icon";
-import MoviesIcon from "../../../public/assets/MoviesIcon";
-import TVIcon from "../../../public/assets/TVIcon";
-import BookMarkIcon from "../BookMarkIcon";
+
 import ProfilePhoto from "../../../public/assets/images/image-avatar.png";
 import Logo from "../../../public/assets/logo";
 import Icon from '../../../public/assets/Icon';

@@ -5,11 +5,13 @@ const SearchBar = ({dataType, onSubmit}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(value);
+        onSubmit(value)
+
     };
 
     const handleChange = (e) => {
         setValue(e.target.value)
+        
     }
     return (
         <div className="search">

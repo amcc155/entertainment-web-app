@@ -12,7 +12,7 @@ const Homes = ({
   searchTerm,
 }) => {
   const recommended = filteredMovies.filter(
-    (movie) => movie.category === "Movie"
+    (movie) => !movie.isTrending
   );
   const trending = filteredMovies.filter((item) => item.isTrending);
 

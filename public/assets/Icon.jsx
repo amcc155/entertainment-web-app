@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-
 const Icon = ({isActive, svgPath}) => {
 
 const iconStyle = {
     fill: isActive?'white':'#5A698F'
 }
   
-
   return (
     <svg
       width="20"

@@ -23,13 +23,14 @@ form{
     flex-direction: column;
     /* border-bottom:1px solid white; */
     margin-top:2rem;
+    width:500px;
 }
 
 form::after{
     content: '';
-    border-bottom: 2px solid white; 
+    /* border-bottom: 2px solid white;  */
     padding-top:1rem;
-    width:70%;
+    width:100%;
 }
 
 
