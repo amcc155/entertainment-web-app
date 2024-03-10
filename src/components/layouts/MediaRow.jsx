@@ -12,14 +12,7 @@ const MediaRow = ({
   dataType,
   showSearchBar = true,
 }) => {
-  //When a User leaves the route, get rid of the searching display and set Searched DAta back to normal data
-  useEffect(() => {
-    return () => {
-      // Cleanup function that sets searching to false when component unmounts
-      setSearching(false);
-      setSearchTerm("");
-    };
-  }, []);
+
 
   const arrayLength = media.length;
 

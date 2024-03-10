@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
+        <NavBar setSearching = {setSearching} setSearchTerm={setSearchTerm}/>
         <Routes>
           <Route
             path="/"

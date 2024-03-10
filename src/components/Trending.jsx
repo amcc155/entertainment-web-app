@@ -9,7 +9,7 @@ const Trending = ({ handleClick, data, filteredMovies }) => {
     <>
       <h1 id="trendingHeader"> Trending </h1>
       <div className="TrendingContainer">
-        {TrendingMovies.map((movie, index) => (
+        {TrendingMovies.map((movie) => (
         <Card handleClick={handleClick} movie={movie} isTrending = {true} />
 
         ))}

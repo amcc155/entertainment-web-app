@@ -8,37 +8,52 @@ const Homes = ({
   filteredMovies,
   searching,
   setSearching,
-  setSearchTerm,
-  searchTerm,
+  setSearchTerm
 }) => {
   const recommended = filteredMovies.filter(
     (movie) => !movie.isTrending
   );
   const trending = filteredMovies.filter((item) => item.isTrending);
 
+  
   return (
-    <>
-      <main>
+     <main>
         <SearchBar dataType={"Movies and TV Shows"} onSubmit={SearchData} />
-
-        <Trending
-          handleClick={handleClick}
-          data={trending}
-          filteredMovies={trending}
-        />
-
-        <MediaRow
+        {searching?(
+          
+          <MediaRow
+          media={recommended.concat(trending)}
           handleClick={handleClick}
           SearchData={SearchData}
           searching={searching}
           setSearching={setSearching}
           setSearchTerm={setSearchTerm}
-          media={recommended}
-          dataType={"Recommended"}
-          showSearchBar={false}
-        />
+           dataType={"Recommended"}
+          showSearchBar={false}/>
+         
+               ):(
+                <>
+                <Trending
+                handleClick={handleClick}
+                data={trending}
+                filteredMovies={trending}
+              />
+      
+              <MediaRow
+                handleClick={handleClick}
+                SearchData={SearchData}
+                searching={searching}
+                setSearching={setSearching}
+                setSearchTerm={setSearchTerm}
+                media={recommended}
+                dataType={"Recommended"}
+                showSearchBar={false}
+              />
+                 </>
+      )}
+       
       </main>
-    </>
+
   );
 };
 export default Homes;
