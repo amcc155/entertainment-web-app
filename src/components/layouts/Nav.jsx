@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 import ProfilePhoto from "../../../public/assets/images/image-avatar.png";
-import Logo from "../../../public/assets/logo";
-import Icon from '../../../public/assets/Icon';
+import Logo from "../common/logo";
+import Icon from '../common/Icon';
 import "../../styles/nav.css";
 
 const NavBar = ({setSearching, setSearchTerm}) => {

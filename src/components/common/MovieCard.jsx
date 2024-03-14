@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MovieBookmarked from "../ MovieBookmarkedIcon";
 import "../../styles/mainMovieDisplays.css";
 import "../../styles/singleRowMovie.css";
+import TvIcon from "./tvIcon";
+import MovieIcon from "./MovieIcon";
 
 const Card = ({ handleClick, movie, isTrending }) => {
   const [hover, setHover] = useState(false);
@@ -66,13 +68,9 @@ const Card = ({ handleClick, movie, isTrending }) => {
         {/* display category images based off what category it is */}
         <div id="movieCategory">
           {movie.category == "Movie" ? (
-            <img
-              src="../../public/assets/icon-category-movie.svg"
-              alt="movie icon"
-              loading="lazy"
-            />
+            <MovieIcon/>
           ) : (
-            <img src="../../public/assets/icon-category-tv.svg" alt="tv icon" loading="lazy" />
+            <TvIcon/>
           )}{" "}
         </div>
 

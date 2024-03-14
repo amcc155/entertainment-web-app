@@ -1,6 +1,5 @@
 import Card from "../common/MovieCard";
 import SearchBar from "../common/SearchBar";
-import React, { useEffect } from "react";
 const MediaRow = ({
   handleClick,
   SearchData,
