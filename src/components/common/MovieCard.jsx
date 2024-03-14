@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MovieBookmarked from "../ MovieBookmarkedIcon";
+import MovieBookmarked from "./ MovieBookmarkedIcon";
 import "../../styles/mainMovieDisplays.css";
 import "../../styles/singleRowMovie.css";
 import TvIcon from "./tvIcon";
