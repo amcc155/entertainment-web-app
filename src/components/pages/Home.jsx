@@ -1,6 +1,6 @@
 import SearchBar from "../common/SearchBar";
 import MediaRow from "../layouts/MediaRow";
-import Trending from "../Trending";
+import Trending from "./Trending";
 
 const Homes = ({
   handleClick,

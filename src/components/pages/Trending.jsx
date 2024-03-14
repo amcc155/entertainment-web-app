@@ -1,5 +1,4 @@
-
-import "../styles/singleRowMovie.css";
+import '../../styles/singleRowMovie.css'
 import Card from "../common/MovieCard";
 const Trending = ({ handleClick, filteredMovies }) => {
   const TrendingMovies = filteredMovies.filter((Movie) => Movie.isTrending);

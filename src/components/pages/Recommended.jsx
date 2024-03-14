@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/mainMovieDisplays.css";
-import Card from "./MovieCard";
-import AnimatedCardWrapper from "./AnimatedCardWrapper";
+
 
 const Recommended = ({ handleClick, SearchData, filteredMovies, searching, setSearching, setSearchTerm,  searchTerm }) => {
   const movies = filteredMovies.filter((movie) => movie.category === 'Movie')
