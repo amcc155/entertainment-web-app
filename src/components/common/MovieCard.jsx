@@ -15,10 +15,12 @@ const Card = ({ handleClick, movie, isTrending }) => {
   /** logic to change pictures based on viewport */
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 768 & !isTrending) {
         setImageSize("medium");
       } else if (window.innerWidth >= 1024) {
         setImageSize("large");
+      }else{
+        setImageSize('small')
       }
     };
     handleResize();
@@ -35,7 +37,7 @@ const Card = ({ handleClick, movie, isTrending }) => {
     >
       <img
         className={isTrending? "trendingMovie" : "recommendedImage"}
-        src={movie.thumbnail.regular[imageSize]}
+        src={isTrending? movie.thumbnail.trending[imageSize] : movie.thumbnail.regular[imageSize]}
         alt={imageSize}
         loading="lazy"
       />
