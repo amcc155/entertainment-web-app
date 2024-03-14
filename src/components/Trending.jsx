@@ -10,7 +10,7 @@ const Trending = ({ handleClick, data, filteredMovies }) => {
       <h1 id="trendingHeader"> Trending </h1>
       <div className="TrendingContainer">
         {TrendingMovies.map((movie) => (
-        <Card handleClick={handleClick} movie={movie} isTrending = {true} />
+        <Card handleClick={handleClick} movie={movie} isTrending = {true} key = {movie.title} />
 
         ))}
       </div>

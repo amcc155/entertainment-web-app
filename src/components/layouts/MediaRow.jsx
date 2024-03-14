@@ -32,7 +32,7 @@ const MediaRow = ({
       )}
       <div className="recommendedMoviesContainer">
         {media.map((movie, index) => (
-          <Card movie={movie} handleClick={handleClick} index={index} />
+          <Card movie={movie} handleClick={handleClick} index={index} key = {movie.title}/>
         ))}
       </div>
     </>
