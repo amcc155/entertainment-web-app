@@ -21,6 +21,7 @@ const Homes = ({
         <SearchBar dataType={"Movies and TV Shows"} onSubmit={SearchData} />
         {searching?(
           
+          //if user searched for something, show rows of both trending and recommended
           <MediaRow
           media={recommended.concat(trending)}
           handleClick={handleClick}

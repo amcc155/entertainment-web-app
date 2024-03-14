@@ -1,27 +1,27 @@
 
-  nav{
-    background-color: #161d2f;
-    top: 0px;
-    margin-top:0px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    
+nav{
+  background-color: #161d2f;
+  top: 0px;
+  margin-top:0px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  
 }
 
-.leftSide{
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding-left:1rem;
+.leftSide, .rightSide{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left:1rem;
+  align-items: center;
+  padding-right: 1rem;
 }
 
 .middleIcons{
-    display: flex;
-    justify-content: center;
-    gap:1.5rem;
-   margin-right:6.5rem;
-  
+  display: flex;
+  justify-content: center;
+  gap:1.5rem;
 }
 
 ul{
@@ -34,9 +34,6 @@ ul li{
     cursor:pointer;
 }
 
-ul li:hover{
-    fill:#FC4747
-}
 
 
 #photo{
@@ -44,7 +41,7 @@ ul li:hover{
     width:24px;
     border:1px solid white;
     border-radius: 360px;
-    margin-right: 1rem;
+
 
 }
 
@@ -52,23 +49,36 @@ ul li:hover{
 
 nav{
     width:5rem;
-    height:600px;
-    position: absolute;
+    height:650px;
     z-index: 1;
     margin-left:1rem;
     margin-top:2rem;
     flex-direction: column;
     justify-content: flex-start;
     padding-top:2rem;
-    position :fixed
-    
+    position :fixed;
+    align-items: center;
    }
 
   .middleIcons{
     flex-direction: column;
-   
-    margin:0 auto;
+   margin:0 auto;
+   margin-top:3rem;
+   gap:2rem;
   }
+
+  .rightSide, .leftSide{
+    margin:0;
+    padding: 0;
+  }
+
+  .rightSide{
+    margin-top: auto;
+    margin-bottom:1rem;
+  }
+
+ 
+
 
   ul{
     flex-direction: column;

@@ -55,11 +55,13 @@ const NavBar = ({setSearching, setSearchTerm}) => {
               </NavLink>
             </li>
           </div>
-
+      </ul>
+      <div class = 'rightSide'>
           <li id="ProfileImage">
             <img id="photo" src={ProfilePhoto} alt="profile-photo" />
           </li>
-        </ul>
+          </div>
+       
       </nav>
     </>
   );

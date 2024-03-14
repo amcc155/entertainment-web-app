@@ -11,7 +11,7 @@ import MovieList from "./components/pages/Movies";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState(dataJSON);
-  const filteredMovies = data.filter((item) => item.title.includes(searchTerm));
+  const filteredMovies = data.filter((item) => item.title.toLowerCase().includes(searchTerm));
 
   const [searching, setSearching] = useState(false);
 
@@ -24,8 +24,6 @@ function App() {
       return item;
     });
     setData(newData);
-
-    console.log(newData);
   };
 
   //  funciton to search through json, pass it to searchBar componenet. Move up in state later
@@ -35,7 +33,7 @@ function App() {
       setSearchTerm(query);
       setSearching(false);
     } else {
-      setSearchTerm(query);
+      setSearchTerm(query.toLowerCase());
       setSearching(true);
     }
   };

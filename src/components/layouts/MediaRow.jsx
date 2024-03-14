@@ -5,7 +5,6 @@ const MediaRow = ({
   handleClick,
   SearchData,
   searching,
-  setSearching,
   setSearchTerm,
   searchTerm,
   media,
@@ -17,7 +16,7 @@ const MediaRow = ({
   const arrayLength = media.length;
 
   return (
-    <div className="test">
+    <>
       {showSearchBar && (
         <SearchBar
           dataType={dataType}
@@ -36,7 +35,7 @@ const MediaRow = ({
           <Card movie={movie} handleClick={handleClick} index={index} />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 export default MediaRow;
