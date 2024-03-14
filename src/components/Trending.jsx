@@ -1,8 +1,7 @@
 
 import "../styles/singleRowMovie.css";
 import Card from "./common/MovieCard";
-import SearchBar from "./common/SearchBar";
-const Trending = ({ handleClick, data, filteredMovies }) => {
+const Trending = ({ handleClick, filteredMovies }) => {
   const TrendingMovies = filteredMovies.filter((Movie) => Movie.isTrending);
 
   return (

@@ -35,6 +35,7 @@ const Card = ({ handleClick, movie, isTrending }) => {
         className={isTrending? "trendingMovie" : "recommendedImage"}
         src={movie.thumbnail.regular[imageSize]}
         alt={imageSize}
+        loading="lazy"
       />
 
       {hover ? (
@@ -68,9 +69,10 @@ const Card = ({ handleClick, movie, isTrending }) => {
             <img
               src="../../public/assets/icon-category-movie.svg"
               alt="movie icon"
+              loading="lazy"
             />
           ) : (
-            <img src="../../public/assets/icon-category-tv.svg" alt="tv icon" />
+            <img src="../../public/assets/icon-category-tv.svg" alt="tv icon" loading="lazy" />
           )}{" "}
         </div>
 
