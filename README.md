@@ -30,7 +30,7 @@ Users should be able to:
 
 
 ### Links
-- Live Site URL: [Add live site URL here](https://entertainment-web-app-aidmccor.netlify.app/bookmarked)
+- Live Site URL: [Add live site URL here](https://entertainment-web-app-aidmccor.netlify.app)
 
 
 
